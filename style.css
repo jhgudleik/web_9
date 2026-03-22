@@ -116,7 +116,13 @@ li.item.active {
 .animated {
   animation: pulse 0.5s;
 }
-#actionButtons {
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+
+  #actionButtons {
   list-style: none;
   padding: 0;
   margin: 15px 0;
@@ -132,8 +138,4 @@ li.item.active {
   vertical-align: top;
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
 }
